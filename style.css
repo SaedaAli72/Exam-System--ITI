@@ -1,0 +1,78 @@
+body{
+   font-family: system-ui;
+}
+.nav{
+    /* background-color:whitesmoke; */
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    background-color:#fff;
+}
+.h2{
+    width: 40%;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #5fcf80;
+}
+.btn-2{
+    width: 60%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+button{
+     padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #5fcf80;
+}
+img{
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    top:85px;
+  
+    
+   
+}
+.txt{
+    /* text-align: center; */
+    padding: 100px 50px;
+    position: absolute;
+    
+}
+.txt h2{
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+   /* font-family: system-ui; */
+}
+.txt p{
+    font-family: system-ui;
+    color: #dffdfe;
+}
+.txt button{
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 35px 10px 35px;
+    border-radius: 50px;
+    transition: 0.4s;
+    margin-top: 30px;
+    border: 2px solid none
+
+}
