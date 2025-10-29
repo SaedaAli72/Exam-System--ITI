@@ -31,7 +31,7 @@
 }
 .sidebar{
     position: relative;
-    background-color: #5fcf80;
+    background-color: #a8e2b9;
     grid-area: side;
     border-radius: 50px;
 
@@ -56,13 +56,14 @@
   width: 80px;
   height: 35px;
   border-radius: 20%;
-  background-color: #5fcf80;
+  background-color: #a8e2b9;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
   font-weight: bold;
   cursor: pointer;
   border: none;
+  /* display: none; */
 
 }
 
@@ -74,7 +75,7 @@
   width: 80px;
   height: 35px;
   border-radius: 20%;
-  background-color: #5fcf80;
+  background-color: #a8e2b9;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
@@ -91,7 +92,7 @@
   width: 80px;
   height: 35px;
   border-radius: 20%;
-  background-color: #5fcf80;
+  background-color: #a8e2b9;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
@@ -108,13 +109,15 @@
   width: 80px;
   height: 35px;
   border-radius: 20%;
-  background-color: #5fcf80;
+  background-color: #a8e2b9;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
   font-weight: bold;
   cursor: pointer;
   border: none;
+  /* display: none; */
+
   
 }
 .logout{
@@ -125,7 +128,7 @@
   width: 80px;
   height: 35px;
   border-radius: 20%;
-  background-color: #5fcf80;
+  background-color: #a8e2b9;
   color: #ffffff;
   text-align: center;
   line-height: 30px;

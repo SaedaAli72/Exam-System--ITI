@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="vieiuytrerfghjhgfport" content="iuytrerfghjhgfidth=device-iuytrerfghjhgfidth, initial-scale=1.0">
+    <meta name="vieport" content="idth=device-idth, initial-scale=1.0">
     <title>UI Page</title>
     <link rel="stylesheet" href="ui.css">
 </head>
@@ -13,16 +13,16 @@
         </div>
 
         <div class="sidebar">
-            <span class="marked">nnnnnnnnnnnnnn</span> <br>
-            <span class="marked">iuytrerfghjhgf</span> <br>
-            <span class="marked">iuytrerfghjhgf</span> <br>
-            <span class="marked">iuytrerfghjhgf</span> <br>
-            <span class="marked">iuytrerfghjhgf</span> <br>
-            <span class="marked">iuytrerfghjhgf</span> <br>
-            <span class="marked">iuytrerfghjhgf</span> <br>
-            <span class="marked">iuytrerfghjhgf</span> <br>
-            <span class="marked">iuytrerfghjhgf</span> <br>
-            <span class="marked">iuytrerfghjhgf</span> <br>
+            <span id="q1" class="marked"></span> <br>
+            <span id="q2" class="marked"></span> <br>
+            <span id="q3" class="marked"></span> <br>
+            <span id="q4" class="marked"></span> <br>
+            <span id="q5" class="marked"></span> <br>
+            <span id="q6" class="marked"></span> <br>
+            <span id="q7" class="marked"></span> <br>
+            <span id="q8" class="marked"></span> <br>
+            <span id="q9" class="marked"></span> <br>
+            <span id="q10" class="marked"></span> <br> 
             
         </div>   
 
@@ -31,22 +31,23 @@
                 <div class="timeline"></div>
             </div>
             <div class="question">
-                <h1>1- iuytrerfghjhgfhat does IDE stand for?</h1><br><br>
-                <input type="radio" id="ansiuytrerfghjhgfer_1" name="questions">
-                <label for="ansiuytrerfghjhgfer_1">Integrated Development Environment</label><br><br>
-                <input type="radio" id="ansiuytrerfghjhgfer_2" name="questions"> 
-                <label for="ansiuytrerfghjhgfer_2">Internet Data Exchange</label><br><br>
-                <input type="radio" id="ansiuytrerfghjhgfer_3" name="questions">
-                <label for="ansiuytrerfghjhgfer_3">Internal Debug Engine</label><br><br>
-                <input type="radio" id="ansiuytrerfghjhgfer_4" name="questions">
-                <label for="ansiuytrerfghjhgfer_4">Interactive Design Editor</label><br><br>
+                <h1 id="questionTitle"></h1><br><br>
+                <input type="radio" id="answer_1" name="questions">
+                <label for="answer_1"></label><br><br>
+                <input type="radio" id="answer_2" name="questions"> 
+                <label for="answer_2"></label><br><br>
+                <input type="radio" id="answer_3" name="questions">
+                <label for="answer_3"></label><br><br>
+                <input type="radio" id="answer_4" name="questions">
+                <label for="answer_4"></label><br><br>
             </div>
             <form>
                 <div class="buttons">
-                    <button class="previous" onclick="previousQuestion()">Previous</button>
-                    <button class="next" onclick="nextQuestion()">Next</button>
-                    <button class="flag" onclick="flagedQuestions()">Flag</button>
-                    <button class="submit">Submit</button>
+                    <button type="button"  id="previousBtn" class="previous" onclick="previousQuestion()">Previous</button>
+                    <button type="button" class="next" onclick="nextQuestion()">Next</button>
+                    <button type="button" class="flag" onclick="flagedQuestions()">Flag</button>
+                    <button type="submit" class="submit">Submit</button>
+
                 </div>    
 
             </form>    
@@ -56,6 +57,6 @@
 
     </div>
 
-    <script src="ui.js"></script>
+<script src="exam.js"></script>
 </body>
 </html>
