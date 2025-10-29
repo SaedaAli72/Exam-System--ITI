@@ -12,19 +12,7 @@
             <button class="logout">Log Out</button>
         </div>
 
-        <div class="sidebar">
-            <span id="q1" class="marked"></span> <br>
-            <span id="q2" class="marked"></span> <br>
-            <span id="q3" class="marked"></span> <br>
-            <span id="q4" class="marked"></span> <br>
-            <span id="q5" class="marked"></span> <br>
-            <span id="q6" class="marked"></span> <br>
-            <span id="q7" class="marked"></span> <br>
-            <span id="q8" class="marked"></span> <br>
-            <span id="q9" class="marked"></span> <br>
-            <span id="q10" class="marked"></span> <br> 
-            
-        </div>   
+        <div class="sidebar" id="sidebar"></div>   
 
         <div class="content">
             <div class="timeline-container">
@@ -44,9 +32,9 @@
             <form>
                 <div class="buttons">
                     <button type="button"  id="previousBtn" class="previous" onclick="previousQuestion()">Previous</button>
-                    <button type="button" class="next" onclick="nextQuestion()">Next</button>
+                    <button type="button"  class="next" onclick="nextQuestion()">Next</button>
                     <button type="button" class="flag" onclick="flagedQuestions()">Flag</button>
-                    <button type="submit" class="submit">Submit</button>
+                    <button type="submit" id="submitBtn" class="submit">Submit</button>
 
                 </div>    
 
