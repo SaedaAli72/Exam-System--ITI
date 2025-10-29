@@ -59,11 +59,12 @@ function passValidateInput(){
      var passValidationMessage = document.getElementById('passValidationMessage');
 
      if (passReg.test(password) === false) {
-        passValidationMessage.textContent = "Password must be at least 8 characters and include uppercase,lowercase, number, and special charactars";
+        passValidationMessage.textContent = "-Password must be at least 8 characters- include uppercase,lowercase, number, and special charactars";
         
     }
 
     else {
-        validationMessage.textContent = "";
+        passValidationMessage.textContent = "";
+       
     }
 }
