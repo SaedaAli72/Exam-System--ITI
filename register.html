@@ -14,15 +14,23 @@
         <div class="login-container">
             <h3>SignUp</h3>
            
+            <form action="Interface_Page.html" method="GET" onsubmit="return validateForm(event)">
              
-            <input type="text" name="f-name" id="f-name" class="login-input" placeholder="Enter first name"> <hr>
-            <input type="text" name="l-name" id="l-name" class="login-input" placeholder="Enter last name"> <hr>
-            <input type="email" name="login" id="email-input" class="login-input" placeholder="Enter email"> <hr>
-            <input type="password" name="login" id="password-input" class="login-input" placeholder="Enter password"> <hr>
-            <input type="password" name="login" id="re-password-input" class="login-input" placeholder="Re-Enter-password"> <hr>
-            <button class="login-button">SignUp</button>
-
+                <input type="text" name="f-name" id="f-name" class="login-input" placeholder="Enter first name" oninput="fnameValidateInput()"> <hr>
+                <div id="fnameValidationMessage" class="validation-message"></div>
+                <input type="text" name="l-name" id="l-name" class="login-input" placeholder="Enter last name" oninput="lnameValidateInput()"> <hr>
+                <div id="lnameValidationMessage" class="validation-message"></div>
+                <input type="text" name="login" id="email-input" class="login-input" placeholder="Enter Email" oninput="validateInput()">
+                <hr>
+                <div id="validationMessage" class="validation-message"></div>
+                <input type="password" name="login" id="password-input" class="login-input" placeholder=" Enter Password" oninput="passValidateInput()"> 
+                <hr>
+                <div id="passValidationMessage" class="validation-message"></div>
+                <input type="password" name="login" id="re-password-input" class="login-input" placeholder="Re-Enter-password" oninput="rePassValidateInput()"> <hr>
+                <div id="repassValidationMessage" class="validation-message"></div>
+                <input type="submit" name="submit" value="Sign Up" id="" class="login-button">
+            </form>
         </div>
-    
+    <script src="validation.js"></script>
 </body>
 </html>

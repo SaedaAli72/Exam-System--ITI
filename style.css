@@ -104,7 +104,7 @@ button{
     background-color: #ffffff;
     width: 30%;
     margin: auto 10%  ;
-    padding: 30px 0;
+    padding: 10px 0 20px;
      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
    
@@ -132,8 +132,7 @@ button{
 
 .login-button {
     width: 80%;
-    margin: 10%;
-
+    margin: 0px 10%;
      background-color: #00c78b;
   color: #fff;
   border: none;
@@ -145,7 +144,7 @@ button{
 .login-input {
     width: 80%;
     padding: 7px;
-    margin: 5px 10%;
+    margin: 0px 10%;
     border: 0;
     font-size: 10px;
      
