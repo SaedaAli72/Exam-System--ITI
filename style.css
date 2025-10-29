@@ -144,16 +144,14 @@ button{
 }
 .login-input {
     width: 80%;
-    margin: 7px 10%;
+    padding: 7px;
+    margin: 5px 10%;
     border: 0;
     font-size: 10px;
      
    
 }
-input:focus {
-  outline: none; /* يشيل المربع الأسود */
-  
-}
+
 
 input::placeholder {
     color: #b3b3b3 ;
@@ -176,4 +174,18 @@ hr{
 }
 .register-link a:hover {
   text-decoration: underline;
+}
+
+.validation-message {
+  color: #e74c3c;
+  font-size: 0.7rem;
+  /* margin-top: 5px; */
+  min-height: 20px;
+   width: 80%;
+    margin: 5px 10% 0px; 
+}
+input:focus {
+  outline: none; 
+  box-shadow: none;
+  
 }
