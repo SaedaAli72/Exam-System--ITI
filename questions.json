@@ -1,0 +1,83 @@
+[
+    {
+  "title": "Which of the following is a programming language?",
+  "answer_1": "HTML",
+  "answer_2": "Python",
+  "answer_3": "CSS",
+  "answer_4": "SQL",
+  "correct_answer": "Python"
+},
+{
+  "title": "Which symbol is used to end a statement in most programming languages like C, C++, and Java?",
+  "answer_1": ":",
+  "answer_2": ";",
+  "answer_3": ".",
+  "answer_4": ",",
+  "correct_answer": ";"
+},
+{
+  "title": "What is the main purpose of a loop in programming?",
+  "answer_1": "To execute code once",
+  "answer_2": "To store data",
+  "answer_3": "To repeat code multiple times",
+  "answer_4": "To stop code execution",
+  "correct_answer": "To repeat code multiple times"
+},
+{
+  "title": "Which data type is used to store true or false values?",
+  "answer_1": "int",
+  "answer_2": "string",
+  "answer_3": "bool",
+  "answer_4": "float",
+  "correct_answer": "bool"
+},
+{
+  "title": "What does IDE stand for?",
+  "answer_1": "Integrated Development Environment",
+  "answer_2": "Internet Data Exchange",
+  "answer_3": "Internal Debug Engine",
+  "answer_4": "Interactive Design Editor",
+  "correct_answer": "Integrated Development Environment"
+},
+{
+  "title": "Which of the following is used to take input from the user in Python?",
+  "answer_1": "input()",
+  "answer_2": "read()",
+  "answer_3": "scan()",
+  "answer_4": "get()",
+  "correct_answer": "input()"
+},
+{
+  "title": "Which operator is used for assignment in most programming languages?",
+  "answer_1": "==",
+  "answer_2": "=",
+  "answer_3": "!=",
+  "answer_4": "++",
+  "correct_answer": "="
+},
+{
+  "title": "What is the output of 3 + 2 * 2 in programming following operator precedence?",
+  "answer_1": "10",
+  "answer_2": "7",
+  "answer_3": "9",
+  "answer_4": "8",
+  "correct_answer": "7"
+},
+{
+  "title": "Which of the following is used to define a block of code in Python?",
+  "answer_1": "Curly braces {}",
+  "answer_2": "Parentheses ()",
+  "answer_3": "Indentation",
+  "answer_4": "Quotation marks",
+  "correct_answer": "Indentation"
+},
+{
+  "title": "What is debugging?",
+  "answer_1": "Writing new code",
+  "answer_2": "Finding and fixing errors in the code",
+  "answer_3": "Adding comments to the code",
+  "answer_4": "Optimizing algorithms",
+  "correct_answer": "Finding and fixing errors in the code"
+}
+
+]
