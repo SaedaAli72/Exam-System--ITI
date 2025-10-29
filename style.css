@@ -1,6 +1,11 @@
 body{
    font-family: system-ui;
 }
+body {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
 .nav{
     /* background-color:whitesmoke; */
     width: 100%;
@@ -36,7 +41,7 @@ button{
   cursor: pointer;
   background-color: #5fcf80;
 }
-img{
+ .interface img{
     position: absolute;
     inset: 0;
     display: block;
@@ -58,6 +63,7 @@ img{
     font-size: 48px;
     font-weight: 700;
     color: #fff;
+    
    /* font-family: system-ui; */
 }
 .txt p{
@@ -77,27 +83,28 @@ img{
 
 }
 .login-page{
-    background: linear-gradient(135deg, #e6fff5, #f9fffc);
+    background: linear-gradient(135deg, #f5fbf9, #f9fffc);
     padding: 50px;
+    display: flex;
    
     
    
     
 }
-/* .img{
+.img{
      width: 30%;
  margin: auto 10%;
 }
  
 .img img{
         width: 330px;
-} */
+}
 .login-container{
     
     background-color: #ffffff;
-    width: 40%;
-    margin: auto 30%  ;
-    padding: 15px;
+    width: 30%;
+    margin: auto 10%  ;
+    padding: 30px 0;
      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
    
@@ -106,9 +113,10 @@ img{
 .login-container h3 {
      font-size: 24px;
     font-weight: 700;
-    color: #222;
+    color: #6f6b6b;
     width: 80%;
-    margin: 15px 10% 5px;
+    text-align: center;
+    margin: 15px 10% 15px;
     /* font-size: 18px;
     font-weight: 650; */
     letter-spacing: 1px;
@@ -136,6 +144,7 @@ img{
 }
 .login-input {
     width: 80%;
+    padding: 7px;
     margin: 5px 10%;
     border: 0;
     
@@ -144,8 +153,11 @@ img{
      
    
 }
+
+
 input::placeholder {
     color: #b3b3b3 ;
+   
 }
 hr{
     width: 80%;
@@ -164,4 +176,18 @@ hr{
 }
 .register-link a:hover {
   text-decoration: underline;
+}
+
+.validation-message {
+  color: #e74c3c;
+  font-size: 0.7rem;
+  /* margin-top: 5px; */
+  min-height: 20px;
+   width: 80%;
+    margin: 5px 10% 0px; 
+}
+input:focus {
+  outline: none; 
+  box-shadow: none;
+  
 }
