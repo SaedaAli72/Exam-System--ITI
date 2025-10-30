@@ -44,6 +44,7 @@ function showQuestion(){
         subBtn.style.display = "none";
     }
 
+    
 
     
 }
@@ -89,6 +90,20 @@ function flagedQuestions(){
         sidebar.appendChild(flaggedSpan);
        }
 }
+
+
+
+
+
+// function studentAnswer(){
+//     var stAns = [];
+//     let existAnswer = document.querySelector(`.question radio[data = '${index}']`)
+
+//     if(stAns.include(existAnswer) ){
+        
+//     }
+
+    
 
 
 
