@@ -190,3 +190,37 @@ input:focus {
   box-shadow: none;
   
 }
+.grade-container{
+    background-color: #ffffff;
+    width: 60%;
+    margin: auto 20%  ;
+    padding: 10px 0 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+}
+.grade-box{
+
+    width: 70px;
+    margin: auto;
+     background-color: #00c78b;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 700;
+  font-size: 30px;
+ 
+}
+.grade-container .text{
+    color:#b0b0b0 ;
+}
+.student-name{
+ font-weight: 700;
+}
+.grade-container h2{
+    color: #00c78b;
+}
+
