@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Page</title>
+    <link rel="stylesheet" href="ExamPage.css">
+</head>
+<body>
+    <div class="container">
+       <div class="sidebar" id="sidebar">
+
+
+        
+            <button class="logout">Log Out</button>
+       
+       </div>
+
+        <div class="content">
+            <div class="timeline-container">
+                <div class="timeline"></div>
+            </div>
+            <div class="question">
+                <h3 id="questionTitle"></h3>
+                <input type="radio" id="answer_1" name="questions" onclick="studentAnswer()" >
+                <label for="answer_1"></label><br><br>
+                <input type="radio" id="answer_2" name="questions" onclick="studentAnswer()" > 
+                <label for="answer_2"></label><br><br>
+                <input type="radio" id="answer_3" name="questions" onclick="studentAnswer()" >
+                <label for="answer_3"></label><br><br>
+                <input type="radio" id="answer_4" name="questions" onclick="studentAnswer()" >
+                <label for="answer_4"></label><br><br>
+            </div>
+             <form>
+                <div class="buttons">
+                    <button type="button"  id="previousBtn" class="previous" onclick="previousQuestion()">Previous</button>
+                    <button type="button"  class="next" onclick="nextQuestion()">Next</button>
+                    <button type="button" class="flag" onclick="flagedQuestions()">Flag</button>
+                    <button type="submit" id="submitBtn" class="submit">Submit</button>
+
+                </div>    
+
+            </form>    
+            
+    </div>
+    
+    <script src="exam.js"></script>
+</body>
+</html>
