@@ -223,4 +223,7 @@ input:focus {
 .grade-container h2{
     color: #00c78b;
 }
-
+.grade-container .last_text{
+    font-size: 13px;
+    font-weight: 500;
+}
