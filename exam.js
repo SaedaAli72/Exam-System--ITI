@@ -1,5 +1,9 @@
 let questionObject =[];
+let studentAnswers =[];
 let index = 0;
+
+
+
 function getQuestions(){
     let myQuestion = new XMLHttpRequest();
     myQuestion.onreadystatechange = function(){
@@ -10,7 +14,7 @@ function getQuestions(){
         }
         
     };
-
+    
     myQuestion.open("GET","questions.json",true);
     myQuestion.send();
 }
@@ -28,34 +32,61 @@ function showQuestion(){
     for(var i = 1; i <= 4; i++){
         document.querySelector(`label[for='answer_${i}']`).textContent = ques[`answer_${i}`]
     }
+
+
+    const savedAnswer = studentAnswers[index];
+    if (savedAnswer) {
+        document.getElementById(savedAnswer).checked = true;
+    }
     
     let prevBtn = document.getElementById("previousBtn");
     let subBtn = document.getElementById("submitBtn");
+    let nexBtn = document.getElementById("nextBtn");
+
 
     if (index == 0) {
         prevBtn.style.display = "none";
-    } else {
+        } 
+    else {
         prevBtn.style.display = "inline-block";
-    }
+        }
 
-     if (index == 9) {
+    if (index == questionObject.length - 1) {
         subBtn.style.display = "inline-block";
-    } else {
+        nexBtn.style.display = "none";
+        prevBtn.style.left = "45%";
+        } 
+    else {
         subBtn.style.display = "none";
-    }
+        nexBtn.style.display = "inline-block";
+        prevBtn.style.left = "35%";
+        }
 
-    
-
-    
 }
 
 
 
 
+function saveStudentAnswer() {
+
+    const selected = document.querySelector("input[name='questions']:checked");
+    if (selected) {
+    studentAnswers[index] = selected.id;
+    } else {
+    studentAnswers[index] = null;
+    }
+}
+    
+
+    
+
+    
 
 
 
 function nextQuestion(){
+
+   saveStudentAnswer();
     if(index < questionObject.length-1){
        index++;
        showQuestion()       
@@ -64,6 +95,8 @@ function nextQuestion(){
 }
 
 function previousQuestion() {
+
+    saveStudentAnswer();
     if (index > 0) {
         index--;
         showQuestion();
@@ -92,22 +125,5 @@ function flagedQuestions(){
 }
 
 
-
-
-
-// function studentAnswer(){
-//     var stAns = [];
-//     let existAnswer = document.querySelector(`.question radio[data = '${index}']`)
-
-//     if(stAns.include(existAnswer) ){
-        
-//     }
-
-    
-
-
-
-
 getQuestions();
-
 
