@@ -12,41 +12,29 @@
             <button class="logout">Log Out</button>
         </div>
 
-        <div class="sidebar">
-            <span id="q1" class="marked"></span> <br>
-            <span id="q2" class="marked"></span> <br>
-            <span id="q3" class="marked"></span> <br>
-            <span id="q4" class="marked"></span> <br>
-            <span id="q5" class="marked"></span> <br>
-            <span id="q6" class="marked"></span> <br>
-            <span id="q7" class="marked"></span> <br>
-            <span id="q8" class="marked"></span> <br>
-            <span id="q9" class="marked"></span> <br>
-            <span id="q10" class="marked"></span> <br> 
-            
-        </div>   
+        <div class="sidebar" id="sidebar"></div>   
 
         <div class="content">
             <div class="timeline-container">
                 <div class="timeline"></div>
             </div>
             <div class="question">
-                <h3 id="questionTitle"></h3><br>
-                <input type="radio" id="answer_1" name="questions">
+                <h1 id="questionTitle"></h1><br><br>
+                <input type="radio" id="answer_1" name="questions" onclick="studentAnswer()" >
                 <label for="answer_1"></label><br><br>
-                <input type="radio" id="answer_2" name="questions"> 
+                <input type="radio" id="answer_2" name="questions" onclick="studentAnswer()" > 
                 <label for="answer_2"></label><br><br>
-                <input type="radio" id="answer_3" name="questions">
+                <input type="radio" id="answer_3" name="questions" onclick="studentAnswer()" >
                 <label for="answer_3"></label><br><br>
-                <input type="radio" id="answer_4" name="questions">
+                <input type="radio" id="answer_4" name="questions" onclick="studentAnswer()" >
                 <label for="answer_4"></label><br><br>
             </div>
             <form>
                 <div class="buttons">
                     <button type="button"  id="previousBtn" class="previous" onclick="previousQuestion()">Previous</button>
-                    <button type="button" class="next" onclick="nextQuestion()">Next</button>
+                    <button type="button"  class="next" onclick="nextQuestion()">Next</button>
                     <button type="button" class="flag" onclick="flagedQuestions()">Flag</button>
-                    <button type="submit" class="submit">Submit</button>
+                    <button type="submit" id="submitBtn" class="submit">Submit</button>
 
                 </div>    
 

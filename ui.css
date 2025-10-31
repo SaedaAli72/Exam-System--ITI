@@ -68,7 +68,6 @@
   cursor: pointer;
   border: none;
 
-  /* display: none; */
 
 }
 
@@ -121,7 +120,7 @@
   font-weight: bold;
   cursor: pointer;
   border: none;
-  /* display: none; */
+  display: none;
 
   
 }
