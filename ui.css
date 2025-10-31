@@ -1,6 +1,9 @@
+
+
 .container{
+  margin-top: 50px;
     width: 100%;
-    height: 100vh;
+    /* height: 100%; */
     display: grid;
     grid-template-rows: 10% 90%;
     row-gap: 10px;
@@ -10,7 +13,7 @@
     justify-content: space-between;
     grid-template-areas: "nav nav nav nav nav nav nav nav nav nav"
                          "cont cont cont cont cont cont cont cont side side";
-    
+ 
 
 
 }
@@ -31,7 +34,7 @@
 }
 .sidebar{
     position: relative;
-    background-color: #a8e2b9;
+      background-color: #5fcf80;
     grid-area: side;
     border-radius: 50px;
 
@@ -47,6 +50,7 @@
   border-radius: 50px;
   background-color: #ffffff;
   
+  
 }
 .previous {
   position: absolute;
@@ -55,14 +59,15 @@
   transform: translateY(-50%);
   width: 80px;
   height: 35px;
-  border-radius: 20%;
-  background-color: #a8e2b9;
+  border-radius: 8px;
+  background-color: #5fcf80;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
   font-weight: bold;
   cursor: pointer;
   border: none;
+
   /* display: none; */
 
 }
@@ -74,8 +79,8 @@
   transform: translateY(-50%);
   width: 80px;
   height: 35px;
-  border-radius: 20%;
-  background-color: #a8e2b9;
+    border-radius: 8px;
+    background-color: #5fcf80;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
@@ -91,8 +96,8 @@
   transform: translateY(-50%);
   width: 80px;
   height: 35px;
-  border-radius: 20%;
-  background-color: #a8e2b9;
+   border-radius: 8px;
+    background-color: #5fcf80;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
@@ -108,8 +113,8 @@
   transform: translateY(-50%);
   width: 80px;
   height: 35px;
-  border-radius: 20%;
-  background-color: #a8e2b9;
+    border-radius: 8px;
+    background-color: #5fcf80;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
@@ -122,13 +127,13 @@
 }
 .logout{
   position: absolute;
-  right: 5%;
-  top: 6.5%;
+  right: 7%;
+  /* top: 6.5%; */
   transform: translateY(-50%);
   width: 80px;
   height: 35px;
-  border-radius: 20%;
-  background-color: #a8e2b9;
+   border-radius: 8px;
+    background-color: #5fcf80;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
@@ -169,15 +174,23 @@
 
 .question{
   position: absolute;
-  top: 100px;
-  left: 300px;
+  top: 20px;
+  left: 250px;
+  color: #2c2a2a;
+  font-family:'Helvetica';
+  
   
  
 }
 label{
-  font-size: x-large;
-  font: bold;
+  font-size:15px;
+  font-weight: 200;
+  
 
   
 
+}
+.question h3{
+   font-weight: 600;
+  
 }
