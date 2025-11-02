@@ -31,16 +31,14 @@
                 <input type="radio" id="answer_4" name="questions" onclick="saveStudentAnswer()" >
                 <label for="answer_4"></label><br><br>
             </div>
-             <form>
+            <form  id="examForm" onsubmit="calculateScore(event)" >
                 <div class="buttons">
-                    <button type="button"  id="previousBtn" class="previous" onclick="previousQuestion()">Previous</button>
-                    <button type="button"  class="next" onclick="nextQuestion()">Next</button>
-                    <button type="button" class="flag" onclick="flagedQuestions()">Flag</button>
-                    <button type="submit" id="submitBtn" class="submit"onclick="calculateScore()">Submit</button>
-
-                </div>    
-
-            </form>    
+                <button type="button" id="previousBtn" class="previous" onclick="previousQuestion()">Previous</button>
+                <button type="button" id="nextBtn" class="next" onclick="nextQuestion()">Next</button>
+                <button type="button" class="flag" onclick="flagedQuestions()">Flag</button>
+                <button type="submit" id="submitBtn" class="submit">Submit</button>
+            </div>
+        </form>
             
     </div>
     

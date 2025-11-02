@@ -76,7 +76,7 @@ function saveStudentAnswer() {
     studentAnswers[index] = null;
     }
 }
-    
+
 
     
 
@@ -124,15 +124,28 @@ function flagedQuestions(){
        }
 }
 
-function calculateScore() {
+
+
+function calculateScore(event) {
+
+  if (event) event.preventDefault();
   var score = 0;
   for (var i = 0; i < questionObject.length; i++) {
     if (studentAnswers[i] === questionObject[i].correct_answer) {
       score++;
-      console.log(score);
-    }
-     console.log(score);
-  }
+    }
+  }
+//   console.log("Final Score:", score);
+//   document.getElementById("result").textContent = "Your score is " + score + " / " + questionObject.length;
+   localStorage.setItem("studentScore", score);
+    localStorage.setItem("totalQuestions", questionObject.length);
+    window.location.href = "gradePage.html";
+
 }
-getQuestions();
+
+   
+//getQuestions();
+window.onload = function() {
+  getQuestions();
+};
 
