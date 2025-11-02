@@ -22,13 +22,13 @@
             </div>
             <div class="question">
                 <h3 id="questionTitle"></h3>
-                <input type="radio" id="answer_1" name="questions" onclick="studentAnswer()" >
+                <input type="radio" id="answer_1" name="questions" onclick="saveStudentAnswer()" >
                 <label for="answer_1"></label><br><br>
-                <input type="radio" id="answer_2" name="questions" onclick="studentAnswer()" > 
+                <input type="radio" id="answer_2" name="questions" onclick="saveStudentAnswer()" > 
                 <label for="answer_2"></label><br><br>
-                <input type="radio" id="answer_3" name="questions" onclick="studentAnswer()" >
+                <input type="radio" id="answer_3" name="questions" onclick="saveStudentAnswer()" >
                 <label for="answer_3"></label><br><br>
-                <input type="radio" id="answer_4" name="questions" onclick="studentAnswer()" >
+                <input type="radio" id="answer_4" name="questions" onclick="saveStudentAnswer()" >
                 <label for="answer_4"></label><br><br>
             </div>
              <form>
@@ -36,7 +36,7 @@
                     <button type="button"  id="previousBtn" class="previous" onclick="previousQuestion()">Previous</button>
                     <button type="button"  class="next" onclick="nextQuestion()">Next</button>
                     <button type="button" class="flag" onclick="flagedQuestions()">Flag</button>
-                    <button type="submit" id="submitBtn" class="submit">Submit</button>
+                    <button type="submit" id="submitBtn" class="submit"onclick="calculateScore()">Submit</button>
 
                 </div>    
 

@@ -124,6 +124,15 @@ function flagedQuestions(){
        }
 }
 
-
+function calculateScore() {
+  var score = 0;
+  for (var i = 0; i < questionObject.length; i++) {
+    if (studentAnswers[i] === questionObject[i].correct_answer) {
+      score++;
+      console.log(score);
+    }
+     console.log(score);
+  }
+}
 getQuestions();
 

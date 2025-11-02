@@ -18,6 +18,14 @@ function validateForm(e) {
     var rePasswordValidationMessage = document.getElementById('repassValidationMessage');
     // myRegex = "/[a-z][A-Z]"
 
+        fnameValidationMessage.textContent = "";
+        lnameValidationMessage.textContent = "";
+        validationMessage.textContent = "";
+        passValidationMessage.textContent = "";
+        rePasswordValidationMessage.textContent = "";
+
+
+
     if (fname === "") {
         e.preventDefault();
         fnameValidationMessage.textContent = "First name is required";
@@ -54,17 +62,17 @@ function validateForm(e) {
         return false;
     } else if (passReg.test(password) === false) {
         e.preventDefault();
-        passValidationMessage.textContent = "Password must be at least 8 characters and include uppercase,lowercase, number, and special charactars";
+        passValidationMessage.textContent = "Password must contain at least 8 characters, including uppercase, lowercase, number, and special symbol.";
         return false;
     }
 
     if (rePassword === "") {
         e.preventDefault();
-        repassValidationMessage.textContent = "Please confirm your password";
+        rePasswordValidationMessage.textContent = "Please confirm your password";
         return false;
     } else if (rePassword !== password) {
         e.preventDefault();
-        repassValidationMessage.textContent = "Passwords do not match";
+        rePasswordValidationMessage.textContent = "Passwords do not match";
         return false;
     }
 
@@ -72,15 +80,79 @@ function validateForm(e) {
     
 
     validationMessage.textContent = "";
+        localStorage.setItem("First Name",fname);
+        localStorage.setItem("Last Name",lname);
+        localStorage.setItem("Email",email);
+        localStorage.setItem("Password",password);
+        
+        for (let i = 0; i < localStorage.length; i++) {
+            const Key = localStorage.key(i);
+            const items =localStorage.getItem(Key);
+            console.log(`${Key}: ${items}`);
+        }
     return true
 }
+
+
+function LoginValidateForm(e) {
+   
+    var loginEmail = document.getElementById("email-input").value;
+    var loginPassword = document.getElementById("password-input").value;
+    var validationMessage = document.getElementById('validationMessage');
+    var passValidationMessage = document.getElementById('passValidationMessage');
+    var loginValidationMessage = document.getElementById('loginValidationMessage');
+
+
+    if (loginEmail === "") {
+        e.preventDefault();
+        validationMessage.textContent = "Email is required"; 
+        return false;
+    } else if (emailReg.test(loginEmail) === false) {
+        e.preventDefault();
+        validationMessage.textContent = "Please enter a valid email address";
+        return false;
+    }
+
+    if (loginPassword === "") {
+        e.preventDefault();
+        passValidationMessage.textContent = "Password is required";
+        return false;
+    } else if (passReg.test(loginPassword) === false) {
+        e.preventDefault();
+        passValidationMessage.textContent = "Password must contain at least 8 characters, including uppercase, lowercase, number, and special symbol.";
+        return false;
+    }
+
+
+
+    
+
+        validationMessage.textContent = "";
+      
+        const localEmail= localStorage.getItem("Email");
+        const localPassword = localStorage.getItem("Password")
+
+        if (localEmail === loginEmail && localPassword === loginPassword) {
+            
+            return true
+        }
+        else{
+            e.preventDefault();
+            loginValidationMessage.textContent="Incorrect email or password. Please try again";
+            return false;
+        }
+        
+    
+}
+
+
 
 function fnameValidateInput() {
    var fname = document.getElementById("f-name").value;
    var fnameValidationMessage = document.getElementById('fnameValidationMessage');
    
     if (!nameReg.test(fname)) {
-        fnameValidationMessage.textContent = "First Name is required";
+        fnameValidationMessage.textContent = "Enter a valid name (letters only)";
     }
 
     else {
@@ -96,7 +168,7 @@ function lnameValidateInput() {
 
    
     if (!nameReg.test(lname)) {
-        lnameValidationMessage.textContent = "Last Name is required";
+        lnameValidationMessage.textContent = "Enter a valid name (letters only)";
     }
 
     else {
@@ -129,7 +201,7 @@ function passValidateInput(){
     
 
      if (passReg.test(password) === false) {
-        passValidationMessage.textContent = "-Password must be at least 8 characters- include uppercase,lowercase, number, and special charactars";
+        passValidationMessage.textContent = "Password must contain at least 8 characters, including uppercase, lowercase, number, and special symbol.";
         
     }
 
@@ -154,3 +226,7 @@ function rePassValidateInput(){
        
     }
 }
+
+    
+
+
