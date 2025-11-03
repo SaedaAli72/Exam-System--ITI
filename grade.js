@@ -1,6 +1,7 @@
  var score = localStorage.getItem("studentScore");
   var total = localStorage.getItem("totalQuestions");
-
+  var FirstName = localStorage.getItem("First Name");
+  var LastName = localStorage.getItem("Last Name");
   
   score = parseInt(score);
   total = parseInt(total);
@@ -9,8 +10,9 @@
 
   var gradeText = document.getElementById("grade_text");
   var lastText = document.getElementById("grade_Last_text");
+var student_name = document.getElementById("student-name") ;
+student_name.textContent = FirstName +(" ")+ LastName;
 
-  
   var percent = (score / total) * 100;
 document.getElementById("student_grade").textContent = `${percent}%`;
 
