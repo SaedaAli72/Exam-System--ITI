@@ -68,7 +68,7 @@ button{
 }
 .txt p{
     font-family: system-ui;
-    color: #dffdfe;
+    color: #fff;
 }
 .txt button{
     font-weight: 500;
@@ -227,3 +227,33 @@ input:focus {
     font-size: 13px;
     font-weight: 500;
 }
+#show_name {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  gap: 6px;
+  background-color: #ffffff; 
+  color: #333;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #5fcf80;
+  font-size: 16px;
+  font-weight: 500;
+   text-transform: capitalize;
+}
+
+#show_name span.hi {
+  color: #5fcf80;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+#show_name span.name {
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+

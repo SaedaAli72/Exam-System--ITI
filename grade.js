@@ -1,5 +1,5 @@
- let score = localStorage.getItem("studentScore");
-  let total = localStorage.getItem("totalQuestions");
+ var score = localStorage.getItem("studentScore");
+  var total = localStorage.getItem("totalQuestions");
 
   
   score = parseInt(score);

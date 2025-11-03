@@ -133,8 +133,11 @@ function LoginValidateForm(e) {
         const localPassword = localStorage.getItem("Password")
 
         if (localEmail === loginEmail && localPassword === loginPassword) {
-            
-            return true
+            var localFirstName = localStorage.getItem("First Name");
+            var localLastName = localStorage.getItem("Last Name");
+            document.getElementById("show_name").textContent = localFirstName + localLastName
+            window.location.href = "interface_Page.html";
+            //return true
         }
         else{
             e.preventDefault();
@@ -227,6 +230,42 @@ function rePassValidateInput(){
     }
 }
 
+window.addEventListener("DOMContentLoaded", () => {
+  const localFirstName = localStorage.getItem("First Name");
+  const localLastName = localStorage.getItem("Last Name");
+  const showName = document.getElementById("show_name");
+  const loginLink = document.getElementById("loginLink");
+  const registerLink = document.getElementById("registerLink");
+  const logoutBtn = document.getElementById("logoutBtn");
+  const getquizbtn = document.getElementById("getquizbtn");
+
+
+  if (localFirstName && localLastName) {
     
+    document.getElementById("show_name").innerHTML = `
+  <span class="hi">Hi</span>
+  <span class="name">${localFirstName} ${localLastName}</span>
+`;
+    showName.style.display = "inline-block";
+
+    
+    loginLink.style.display = "none";
+    registerLink.style.display = "none";
+
+    
+    logoutBtn.style.display = "inline-block";
+    getquizbtn.addEventListener("click", () => {
+         window.location.href="ExamPage.html";
+    })
+
+  }
+
+ 
+  logoutBtn.addEventListener("click", () => {
+    localStorage.clear(); 
+    window.location.reload(); 
+  });
+});
+
 
 

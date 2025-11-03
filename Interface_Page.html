@@ -8,22 +8,25 @@
 </head>
 <body>
     <div class="nav">
-        <div class="h2">Your Exam</div>
-        <div class="btn-2">
-            <a href="login.html"><button class="btn">Login</button></a>
-            <a href="register.html"><button class="btn"> Rigester</button></a>
-        </div>
+        <div class="h2">Your Quiz</div>
+        <div class="btn-2" id="userSection">
+        <a href="login.html" id="loginLink"><button class="btn">Login</button></a>
+        <a href="register.html" id="registerLink"><button class="btn">Register</button></a>
+        <span id="show_name" style="display: none;"></span>
+        <button id="logoutBtn" class="btn" style="display: none;">Logout</button>
+</div>
     </div>
     <div class="interface">
         <img src="images/hero-bg.jpg" alt="">
         <div class="txt">
-            <h2>Learning Today, <br>
-                Leading Tomorrow</h2>
-            <p>We are team of talented designers making websites with Bootstrap</p>
-            <button>Get Start</button>
+            <h2>Ready to Test <br>
+                Your Knowledge?</h2>
+            <p>Start your quiz and see how much you’ve learned!</p>
+            <button id="getquizbtn">Get Start</button>
         </div>
         
     </div>
+    <script src="validation.js"></script>
     
 </body>
 </html>
