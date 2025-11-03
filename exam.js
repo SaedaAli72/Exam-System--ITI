@@ -1,6 +1,9 @@
 let questionObject =[];
 let studentAnswers =[];
 let index = 0;
+let totalTime = 600;
+let timeLeft = totalTime;
+let timerInterval;
 
 
 
@@ -11,6 +14,7 @@ function getQuestions(){
            // console.log(this.responseText);
             questionObject = JSON.parse(this.responseText);
             showQuestion();
+            startProgressBar();
         }
         
     };
@@ -103,25 +107,24 @@ function previousQuestion() {
     }
 }
 
-function flagedQuestions(){
+function flagedQuestions() {
+  let sidebar = document.getElementById("sidebar");
+  let existFlag = document.querySelector(`#sidebar span[data='${index}']`);
+  if (existFlag) {
+    sidebar.removeChild(existFlag);
+  } else {
+    let flaggedSpan = document.createElement("span");
+    flaggedSpan.textContent = `Question Number${index + 1}`;
+    flaggedSpan.classList.add("marked");
+    flaggedSpan.setAttribute("data", index);
     
-    // document.querySelector(`#q${index +1}`).textContent = (`Question Number ${index +1}`);
- 
-    let sidebar = document.getElementById("sidebar");
-    let existFlag = document.querySelector(`#sidebar span[data ='${index}']`);
-    if(existFlag)
-        {
-         sidebar.removeChild(existFlag);
-       }
-        
-    else{
-        let flaggedSpan = document.createElement("span");
-        flaggedSpan.textContent = (`Question Number ${index +1}`);
-        flaggedSpan.classList.add("marked");
-        flaggedSpan.setAttribute("data", index);
-
-        sidebar.appendChild(flaggedSpan);
-       }
+    flaggedSpan.addEventListener("click", function() {
+      index = parseInt(this.getAttribute("data")); 
+      showQuestion();
+      });
+    
+    sidebar.appendChild(flaggedSpan);
+  }
 }
 
 
@@ -144,8 +147,22 @@ function calculateScore(event) {
 }
 
    
-//getQuestions();
-window.onload = function() {
-  getQuestions();
-};
+function startProgressBar() {
+  const progressBar = document.getElementById("progressBar");
+
+  timerInterval = setInterval(() => {
+    timeLeft--;
+
+    let progress = ((totalTime - timeLeft) / totalTime) * 100;
+    progressBar.style.width = progress + "%";
+
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      alert("Time out! Exam submitted automatically.");
+      calculateScore();
+     // window.location.href = "result.html";
+    }
+  }, 1000);
+}
+getQuestions();
 

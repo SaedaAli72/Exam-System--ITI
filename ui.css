@@ -147,21 +147,24 @@
   border: none;
 }
 
-
 .timeline-container {
    background-color: rgb(255, 255, 255);
     width: 85%;
     height: 11px;
     margin: 0 auto;
     border-radius: 5px;
+    border: 2px solid black ;
 }
 
 .timeline {
     width: 0%;
     height: 100%;
-    background-color: #5fcf80;
-    transition: width 1s linear;
+    background: linear-gradient(to right, rgb(0, 255, 149), rgb(0, 255, 64), rgb(0, 255, 115));
+    transition: width 1s linear, background-color 1s linear;
+   
+
 }
+
 .marked{
     color: #ffffff;
     font:bold;

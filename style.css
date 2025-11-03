@@ -254,6 +254,22 @@ input:focus {
   font-size: 15px;
   font-weight: 500;
 }
-
+ .return{
+  display: flex;
+ margin: auto;
+  background-color: #ffffff; 
+  color: #333;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #5fcf80;
+  font-size: 16px;
+  font-weight: 500;
+   text-transform: capitalize;
+}
+.return:hover{
+  background-color:#5fcf80; 
+  color: #ffffff;
+}
 
 

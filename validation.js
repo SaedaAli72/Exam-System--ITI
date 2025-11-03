@@ -255,7 +255,7 @@ window.addEventListener("DOMContentLoaded", () => {
     
     logoutBtn.style.display = "inline-block";
     getquizbtn.addEventListener("click", () => {
-         window.location.href="ExamPage.html";
+         window.location.href="ui.html";
     })
 
   }
