@@ -16,30 +16,38 @@
        
        </div>
 
-        <div class="content">
-            <div class="timeline-container">
-                <div class="timeline"></div>
-            </div>
-            <div class="question">
-                <h3 id="questionTitle"></h3>
-                <input type="radio" id="answer_1" name="questions" onclick="saveStudentAnswer()" >
-                <label for="answer_1"></label><br><br>
-                <input type="radio" id="answer_2" name="questions" onclick="saveStudentAnswer()" > 
-                <label for="answer_2"></label><br><br>
-                <input type="radio" id="answer_3" name="questions" onclick="saveStudentAnswer()" >
-                <label for="answer_3"></label><br><br>
-                <input type="radio" id="answer_4" name="questions" onclick="saveStudentAnswer()" >
-                <label for="answer_4"></label><br><br>
-            </div>
-            <form  id="examForm" onsubmit="calculateScore(event)" >
-                <div class="buttons">
-                <button type="button" id="previousBtn" class="previous" onclick="previousQuestion()">Previous</button>
-                <button type="button" id="nextBtn" class="next" onclick="nextQuestion()">Next</button>
-                <button type="button" class="flag" onclick="flagedQuestions()">Flag</button>
-                <button type="submit" id="submitBtn" class="submit">Submit</button>
-            </div>
-        </form>
-            
+   <div class="content">
+      <div class="timeline-container">
+        <div class="timeline" id="progressBar"></div>
+      </div>
+
+      <div class="question">
+        <h2 id="questionTitle"></h2>
+
+        <input type="radio" id="answer_1" name="questions" onclick="saveStudentAnswer()">
+        <label for="answer_1"></label><br><br>
+
+        <input type="radio" id="answer_2" name="questions" onclick="saveStudentAnswer()">
+        <label for="answer_2"></label><br><br>
+
+        <input type="radio" id="answer_3" name="questions" onclick="saveStudentAnswer()">
+        <label for="answer_3"></label><br><br>
+
+        <input type="radio" id="answer_4" name="questions" onclick="saveStudentAnswer()">
+        <label for="answer_4"></label><br><br>
+      </div>
+
+    
+      <form id="examForm" onsubmit="calculateScore(event)">
+        <div class="buttons">
+          <button type="button" id="previousBtn" class="previous" onclick="previousQuestion()">Previous</button>
+          <button type="button" id="nextBtn" class="next" onclick="nextQuestion()">Next</button>
+          <button type="button" class="flag" onclick="flagedQuestions()">Flag</button>
+          <button type="submit" id="submitBtn" class="submit">Submit</button>
+        </div>
+      </form>
+
+      
     </div>
     
     <script src="exam.js"></script>

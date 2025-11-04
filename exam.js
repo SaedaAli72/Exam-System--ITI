@@ -1,7 +1,7 @@
 let questionObject =[];
 let studentAnswers =[];
 let index = 0;
-let totalTime = 600;
+let totalTime = 60;
 let timeLeft = totalTime;
 let timerInterval;
 
@@ -155,12 +155,16 @@ function startProgressBar() {
 
     let progress = ((totalTime - timeLeft) / totalTime) * 100;
     progressBar.style.width = progress + "%";
-
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
-      alert("Time out! Exam submitted automatically.");
+      // alert("Time out! Exam submitted automatically.");
+      localStorage.setItem("timeOut", "true");
       calculateScore();
      // window.location.href = "result.html";
+    }else{
+     localStorage.setItem("timeOut", "false");
+      
+
     }
   }, 1000);
 }

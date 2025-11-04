@@ -30,13 +30,16 @@
 
 }
 .question {
-   background-color: #ffffff;
+    position:absolute;
+    background-color: #ffffff;
     padding: 20px 40px;
     font-size: 13px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    width: 600px;
-    height: 300px;
+    width: 60%;
+    height: 60%;
+    top: 100px;
+    left: 16%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .sidebar{
@@ -180,17 +183,9 @@
     
 }
 
-.question{
-  position: absolute;
-  top: 100px;
-  left: 300px;
-  
- 
-}
+
 label{
   font-size: x-large;
-  font: bold;
-
-  
+  font:bold;
 
 }
