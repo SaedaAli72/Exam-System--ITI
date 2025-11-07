@@ -16,7 +16,7 @@ body {
 }
 .h2{
     width: 40%;
-    font-size: 25px;
+  
     font-weight: bold;
     position: absolute;
     text-align: center;
@@ -27,6 +27,7 @@ body {
     text-transform: uppercase;
     color: #5fcf80;
 }
+
 .btn-2{
     width: 60%;
     position: absolute;
@@ -35,11 +36,18 @@ body {
 }
 button{
      padding: 10px 22px;
+    font-size: 15px;
   border-radius: 6px;
   border: none;
   color: #fff;
   cursor: pointer;
+  margin-left: 20px;
   background-color: #5fcf80;
+}
+button:hover{
+  
+    transform: scale(1.05);  
+    box-shadow: 0 0 3px rgba(95, 207, 128, 0.6);
 }
  .interface img{
     position: absolute;
@@ -60,7 +68,7 @@ button{
     
 }
 .txt h2{
-    font-size: 48px;
+    font-size: 50px;
     font-weight: 700;
     color: #fff;
     
@@ -68,11 +76,13 @@ button{
 }
 .txt p{
     font-family: system-ui;
+    font-size: 20px;
+
     color: #fff;
 }
 .txt button{
     font-weight: 500;
-    font-size: 15px;
+    font-size: 20px;
     letter-spacing: 1px;
     display: inline-block;
     padding: 8px 35px 10px 35px;
@@ -86,6 +96,7 @@ button{
     background: linear-gradient(135deg, #f5fbf9, #f9fffc);
     padding: 50px;
     display: flex;
+    margin-top: 50px;
    
     
    
@@ -97,14 +108,14 @@ button{
 }
  
 .img img{
-        width: 330px;
+        width: 450px;
 }
 .login-container{
     
     background-color: #ffffff;
     width: 30%;
     margin: auto 10%  ;
-    padding: 10px 0 20px;
+    padding: 35px 0 ;
      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
    
@@ -132,26 +143,53 @@ button{
 
 .login-button {
     width: 80%;
-    margin: 0px 10%;
+    margin: 10px 10%;
      background-color: #00c78b;
   color: #fff;
   border: none;
-  padding: 12px;
+  padding: 15px;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+    font-size: 14px;
+
+}
+.login-button:hover{
+   
+    transform: scale(1.05);  
+    box-shadow: 0 0 3px rgba(95, 207, 128, 0.6);
 }
 .login-input {
     width: 80%;
-    padding: 7px;
-    margin: 0px 10%;
+    padding: 10px;
+    margin: 10px 6.2% 0px;
     border: 0;
     
-    font-size: 10px;
+    font-size: 12px;
     
      
    
 }
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: white;
+  outline: none;          
+  border: 1px solid #ccc;  
+  border-radius: 4px;
+  padding: 15px;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  background-color: white;
+  border-color: #00cc88;  
+  box-shadow: none;        
+}
+
 
 
 input::placeholder {
@@ -160,7 +198,7 @@ input::placeholder {
 }
 hr{
     width: 80%;
-    margin: 5px 10%;
+    margin: 0px 10% ;
     color: #b3b3b3 ;
 
    
@@ -179,7 +217,7 @@ hr{
 
 .validation-message {
   color: #e74c3c;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   /* margin-top: 5px; */
   min-height: 20px;
    width: 80%;
