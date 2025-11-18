@@ -136,7 +136,7 @@ function LoginValidateForm(e) {
             var localFirstName = localStorage.getItem("First Name");
             var localLastName = localStorage.getItem("Last Name");
             document.getElementById("show_name").textContent = localFirstName + localLastName
-            window.location.href = "interface_Page.html";
+            window.location.href = "index.html";
             //return true
         }
         else{
